@@ -1,0 +1,29 @@
+{
+  "name": "enable-es6-features-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "@types/k6": "^1.0.2",
+    "babel-loader": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.42.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-glob-entries": "^1.0.1"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

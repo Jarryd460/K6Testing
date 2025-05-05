@@ -1,0 +1,12 @@
+{
+    "vus": 2,
+    "duration": "1s",
+    "hosts": {
+        "test.k6.io": "1.2.3.4",
+        "test.k6.io:443": "1.2.3.4:8443",
+        "*.grafana.com": "1.2.3.4"
+    },
+    "noConnectionReuse": true,
+    "userAgent": "MyK6UserAgentString/1.0",
+    "discardResponseBodies": true
+}

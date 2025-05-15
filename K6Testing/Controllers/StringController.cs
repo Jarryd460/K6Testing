@@ -37,4 +37,10 @@ public class StringController : ControllerBase
 
         return reverse.ToString();
     }
+
+    [HttpGet("returnstring")]
+    public string ReturnString([FromQuery] string input)
+    {
+        return input;
+    }
 }

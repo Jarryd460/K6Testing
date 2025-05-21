@@ -41,6 +41,13 @@ public class StringController : ControllerBase
     [HttpGet("returnstring")]
     public string ReturnString([FromQuery] string input)
     {
+        Thread.Sleep(5);
         return input;
+    }
+
+    [HttpPost("returnbody")]
+    public object ReturnBody([FromBody] object input)
+    {
+        return $"{input} {input}";
     }
 }

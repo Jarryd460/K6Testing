@@ -1,5 +1,5 @@
 ﻿import http from 'k6/http';
-import { sleep, group } from 'k6';
+import { sleep, group, check } from 'k6';
 import * as config from './config.js';
 
 export const options = {
@@ -12,20 +12,34 @@ export const options = {
 };
 
 export default () => {
-    const response = http.get(config.API_REVERSE_URL);
-
     group('individualRequests', function () {
         http.get(config.API_REVERSE_URL);
-        http.get(config.API_REVERSE_URL);
-        http.get(config.API_REVERSE_URL);
+        let response1 = http.get(config.API_RETURNSTRING_URL);
+        let response2 = http.get(config.API_REVERSE_URL);
+
+        check(response1, {
+            'is status 300': r => r.status == 300
+        });
+
+        check(response2, {
+            'is status 200': r => r.status == 200
+        });
     });
 
     group('batchRequests', function () {
-        http.batch([
+        let responses = http.batch([
             ['GET', config.API_REVERSE_URL],
-            ['GET', config.API_REVERSE_URL],
+            ['GET', config.API_RETURNSTRING_URL],
             ['GET', config.API_REVERSE_URL]
         ]);
+
+        check(responses[0], {
+            'is status 300': r => r.status == 300
+        });
+
+        check(responses[1], {
+            'is status 200': r => r.status == 200
+        });
     });
 
     sleep(1);

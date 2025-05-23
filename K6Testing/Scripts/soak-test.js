@@ -5,9 +5,9 @@ import * as config from './config.js';
 // Normal to more than usual load over a long period of time
 export const options = {
     stages: [
-        { duration: '10m', target: 16 },
-        { duration: '1h', target: 16 },
-        { duration: '5m', target: 5 },
+        { duration: '10m', target: 20 },
+        { duration: '1h', target: 40 },
+        { duration: '5m', target: 10 },
         { duration: '1m', target: 0 }
     ],
     thresholds: {

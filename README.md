@@ -27,6 +27,7 @@ Once the tests have completed, the Dashboard is no longer available.
 - To enable ES6 features and NodeJS node modules resolution, you need to initialize a NodeJS Project by running `npm init -y`.
 and install `npm install` the necessary node modules (see package.json) to transpile the project into commonjs (Vanilla javascript - ES5) using webpack.
 - Once the dependencies has been resolve, run `npm run bundle` to transpile the project into commonjs (Vanilla javascript - ES5) using webpack.
+- With the release of V1.0, typescript is supported automatically. One can create a .ts file and run it with K6 `k6 run {script file}.ts`.
 
 ### Streaming K6 metadata to DataDog
 

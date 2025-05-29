@@ -1,0 +1,36 @@
+{
+	"name": "templateproject",
+	"version": "1.0.0",
+	"description": "A template project structure for writing k6 performance tests",
+	"keywords": [
+		"K6",
+		"performance",
+		"testing",
+		"typescript"
+	],
+	"homepage": "https://github.com/Jarryd460/K6Testing#readme",
+	"bugs": {
+		"url": "https://github.com/Jarryd460/K6Testing/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Jarryd460/K6Testing.git"
+	},
+	"license": "ISC",
+	"author": "Jarryd Deane",
+	"scripts": {
+		"format": "npx prettier --write ."
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"devDependencies": {
+		"husky": "^9.1.7",
+		"prettier": "^3.5.3",
+		"prettier-plugin-curly": "^0.3.2",
+		"prettier-plugin-packagejson": "^2.5.14",
+		"pretty-quick": "^4.1.1"
+	}
+}

@@ -19,7 +19,10 @@
 	"license": "ISC",
 	"author": "Jarryd Deane",
 	"scripts": {
-		"format": "npx prettier --write ."
+		"format": "npx prettier --write .",
+		"k6": "k6 run ./src/tests/multi-scenario-test.ts",
+		"lint": "npx eslint .",
+		"lint:fix": "npx eslint . --fix"
 	},
 	"husky": {
 		"hooks": {
@@ -27,10 +30,29 @@
 		}
 	},
 	"devDependencies": {
+		"@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+		"@eslint/js": "^9.27.0",
+		"@types/k6": "^1.0.2",
+		"@vitest/eslint-plugin": "^1.2.1",
+		"eslint": "^9.27.0",
+		"eslint-plugin-jsdoc": "^50.6.17",
+		"eslint-plugin-jsonc": "^2.20.1",
+		"eslint-plugin-markdown": "^5.1.0",
+		"eslint-plugin-n": "^17.18.0",
+		"eslint-plugin-package-json": "^0.31.0",
+		"eslint-plugin-perfectionist": "^4.13.0",
+		"eslint-plugin-regexp": "^2.7.0",
+		"eslint-plugin-yml": "^1.18.0",
+		"globals": "^16.2.0",
 		"husky": "^9.1.7",
 		"prettier": "^3.5.3",
 		"prettier-plugin-curly": "^0.3.2",
 		"prettier-plugin-packagejson": "^2.5.14",
-		"pretty-quick": "^4.1.1"
+		"pretty-quick": "^4.1.1",
+		"typescript-eslint": "^8.33.0"
+	},
+	"engines": {
+		"node": "20",
+		"npm": "10"
 	}
 }

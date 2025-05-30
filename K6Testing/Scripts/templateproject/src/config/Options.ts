@@ -1,6 +1,6 @@
-﻿import { ExecutionType } from "./ExecutionType.ts";
-import { firstScenarioDefinitions } from "./../scenarios/first-scenario-test.js";
-import { secondScenarioDefinitions } from "./../scenarios/second-scenario-test.js";
+﻿import { firstScenarioDefinitions } from "./../scenarios/first-scenario-test.ts";
+import { secondScenarioDefinitions } from "./../scenarios/second-scenario-test.ts";
+import { ExecutionType } from "./ExecutionType.ts";
 
 let testsToRun = ExecutionType.SMOKE; // default
 if (__ENV.TESTS_TO_RUN) {

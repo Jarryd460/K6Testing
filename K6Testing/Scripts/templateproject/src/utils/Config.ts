@@ -1,4 +1,4 @@
-﻿import { Environment } from "./../config/Environment.js";
+﻿import { Environment } from "./../config/Environment.ts";
 
 let environmentToRun = Environment.DEVELOPMENT; // default
 
@@ -20,4 +20,4 @@ const API_BASE_URL = baseUrl;
 const API_REVERSE_URL = API_BASE_URL + "/string/reverse";
 const API_RETURNSTRING_URL = API_BASE_URL + "/string/returnstring";
 
-export { API_BASE_URL, API_REVERSE_URL, API_RETURNSTRING_URL };
+export { API_BASE_URL, API_RETURNSTRING_URL, API_REVERSE_URL };

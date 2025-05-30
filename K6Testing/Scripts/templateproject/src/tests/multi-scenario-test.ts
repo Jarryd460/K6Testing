@@ -2,11 +2,11 @@
 export { firstScenario } from "./../scenarios/first-scenario-test.ts";
 export { secondScenario } from "./../scenarios/second-scenario-test.ts";
 
-import { DateHelper } from "./../utils/DateHelper.js";
-import { Logger } from "./../utils/Logger.js";
-import { Environment } from "./../common/Environment.ts";
-import { ExecutionType } from "./../common/ExecutionType.ts";
-import { Options } from "./../common/Options.ts";
+import { Environment } from "./../config/Environment.ts";
+import { ExecutionType } from "./../config/ExecutionType.ts";
+import { Options } from "./../config/Options.ts";
+import { DateHelper } from "./../utils/DateHelper.ts";
+import { Logger } from "./../utils/Logger.ts";
 
 let environmentToRun = Environment.DEVELOPMENT; // default
 

@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"declaration": true,
+		"moduleResolution": "node",
+		"outDir": "./dist",
+		"rootDir": ".",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
+}

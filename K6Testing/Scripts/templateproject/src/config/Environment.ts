@@ -1,6 +1,6 @@
 ﻿export const enum Environment {
-	LOCAL = "local",
 	DEVELOPMENT = "dev",
-	STAGING = "stage",
+	LOCAL = "local",
 	PRODUCTION = "prod",
+	STAGING = "stage",
 }

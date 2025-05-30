@@ -22,7 +22,8 @@
 		"format": "npx prettier --write .",
 		"k6": "k6 run ./src/tests/multi-scenario-test.ts",
 		"lint": "npx eslint .",
-		"lint:fix": "npx eslint . --fix"
+		"lint:fix": "npx eslint . --fix",
+		"lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line"
 	},
 	"husky": {
 		"hooks": {
@@ -32,6 +33,7 @@
 	"devDependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
 		"@eslint/js": "^9.27.0",
+		"@types/eslint-plugin-markdown": "^2.0.2",
 		"@types/k6": "^1.0.2",
 		"@vitest/eslint-plugin": "^1.2.1",
 		"eslint": "^9.27.0",
@@ -45,10 +47,13 @@
 		"eslint-plugin-yml": "^1.18.0",
 		"globals": "^16.2.0",
 		"husky": "^9.1.7",
+		"markdownlint": "^0.38.0",
+		"markdownlint-cli": "^0.45.0",
 		"prettier": "^3.5.3",
 		"prettier-plugin-curly": "^0.3.2",
 		"prettier-plugin-packagejson": "^2.5.14",
 		"pretty-quick": "^4.1.1",
+		"sentences-per-line": "^0.3.0",
 		"typescript-eslint": "^8.33.0"
 	},
 	"engines": {

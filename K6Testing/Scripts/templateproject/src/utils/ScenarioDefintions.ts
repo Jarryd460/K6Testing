@@ -1,11 +1,25 @@
-﻿import { ScenarioOptions } from "k6/options";
+﻿import {
+	ConstantArrivalRateScenario,
+	ConstantVUsScenario,
+	ExternallyControlledScenario,
+	PerVUIterationsScenario,
+	RampingArrivalRateScenario,
+	RampingVUsScenario,
+	SharedIterationsScenario,
+} from "k6/options";
 
-import { ExecutionType } from "./../config/ExecutionType.ts";
+import { ExecutionType } from "./../config/ExecutionType.js";
 
 // Left out exec property as it will be set in the individual scenario definitions
 export const generalScenarioDefinitions: Record<
 	ExecutionType,
-	ScenarioOptions
+	| ConstantArrivalRateScenario
+	| ConstantVUsScenario
+	| ExternallyControlledScenario
+	| PerVUIterationsScenario
+	| RampingArrivalRateScenario
+	| RampingVUsScenario
+	| SharedIterationsScenario
 > = {
 	[ExecutionType.LOAD]: {
 		executor: "ramping-vus",

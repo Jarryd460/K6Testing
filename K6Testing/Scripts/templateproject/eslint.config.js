@@ -23,7 +23,16 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
 	{
-		ignores: ["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
+		ignores: [
+			"eslint.config.js",
+			"dist",
+			"**/*.snap",
+			"coverage",
+			"lib",
+			"node_modules",
+			"pnpm-lock.yaml",
+			"package-lock.json",
+		],
 	},
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
 	eslint.configs.recommended,
@@ -71,10 +80,26 @@ export default tseslint.config(
 			"no-useless-rename": "error",
 			"object-shorthand": "error",
 			"operator-assignment": "error",
+			"n/no-missing-import": [
+				"error",
+				{
+					allowModules: ["k6"],
+				},
+			],
 		},
 		settings: {
 			perfectionist: { partitionByComment: true, type: "natural" },
 			vitest: { typecheck: true },
+			"import/resolver": {
+				node: {
+					extensions: [".js", ".jsx", ".ts", ".tsx", ".d.ts", ".json"],
+					moduleDirectory: ["node_modules", "src"],
+				},
+				typescript: {},
+			},
+			node: {
+				tryExtensions: [".js", ".ts", ".json", ".node"],
+			},
 		},
 	},
 	{

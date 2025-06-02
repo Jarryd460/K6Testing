@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
-		"target": "ES5",
-		"module": "commonjs",
+		"target": "ES2016", // Target ES6 as it's supported by K6
+		"lib": ["ES2016", "DOM"], // Dom is needed for console.log and other browser APIs
+		"module": "ESNext",
 		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"removeComments": true,
@@ -10,7 +11,7 @@
 		"declaration": true,
 		"moduleResolution": "node",
 		"outDir": "./dist",
-		"rootDir": ".",
+		"rootDir": "./src",
 		"strict": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,

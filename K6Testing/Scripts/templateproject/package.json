@@ -18,6 +18,7 @@
 	},
 	"license": "ISC",
 	"author": "Jarryd Deane",
+	"type": "module",
 	"scripts": {
 		"format": "npx prettier --write .",
 		"k6": "k6 run ./src/tests/multi-scenario-test.ts",
@@ -37,6 +38,9 @@
 		"@types/k6": "^1.0.2",
 		"@vitest/eslint-plugin": "^1.2.1",
 		"eslint": "^9.27.0",
+		"eslint-import-resolver-node": "^0.3.9",
+		"eslint-import-resolver-typescript": "^4.4.1",
+		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-jsdoc": "^50.6.17",
 		"eslint-plugin-jsonc": "^2.20.1",
 		"eslint-plugin-markdown": "^5.1.0",
@@ -54,6 +58,7 @@
 		"prettier-plugin-packagejson": "^2.5.14",
 		"pretty-quick": "^4.1.1",
 		"sentences-per-line": "^0.3.0",
+		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.33.0"
 	},
 	"engines": {

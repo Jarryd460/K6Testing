@@ -1,9 +1,24 @@
-﻿import { Environment } from "./../config/Environment.ts";
+﻿import { Environment } from "./../config/Environment.js";
 
 let environmentToRun = Environment.DEVELOPMENT; // default
 
 if (__ENV.ENVIRONMENT_TO_RUN) {
-	environmentToRun = Environment[__ENV.ENVIRONMENT_TO_RUN.toUpperCase()];
+	switch (__ENV.ENVIRONMENT_TO_RUN.toUpperCase()) {
+		case "DEVELOPMENT":
+			environmentToRun = Environment.DEVELOPMENT;
+			break;
+		case "LOCAL":
+			environmentToRun = Environment.LOCAL;
+			break;
+		case "PRODUCTION":
+			environmentToRun = Environment.PRODUCTION;
+			break;
+		case "STAGING":
+			environmentToRun = Environment.STAGING;
+			break;
+		default:
+			throw Error(`${__ENV.ENVIRONMENT_TO_RUN} environment not supported`);
+	}
 }
 
 const ENVIRONMENT = environmentToRun;
